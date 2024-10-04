@@ -10,7 +10,7 @@ export const AuthContextProvider = ({ children }) => {
   const [mainData, setMainData] = React.useState(null);
   const [message, setMessage] = React.useState([]);
   async function getMainData() {
-    const response = await fetch(bash_url);
+    const response = await fetch("/chat.json");
     const data = await response.json();
     // if (data) {
     setMainData(data?.results[0]);
